@@ -1,0 +1,29 @@
+/**
+ * Basic typography style for copy text
+ */
+
+/*=============== GOOGLE FONTS ===============*/
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h3 {
+  font-size: f.pix_to_rem(44);
+  line-height: f.pix_to_rem(55);
+  color: v.$text-black;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: f.pix_to_rem(20);
+  line-height: f.pix_to_rem(32);
+  color: v.$text-gray;
+  margin-top: f.pix_to_rem(16);
+  font-weight: normal;
+}

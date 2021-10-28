@@ -1,0 +1,91 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+@use "sass:map";
+@use "../abstracts/mixins" as m;
+@use "../abstracts/animations" as *;
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+// Flex helpers class
+$align-items: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+);
+
+$justify-content: (
+  between: space-between,
+  around: space-around,
+);
+
+$column-directions: (
+  column-reverse: column-reverse,
+  column: column,
+  row-reverse: row-reverse,
+  row: row,
+);
+
+// Flex helpers class
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+@each $key, $value in $align-items {
+  .align-items-#{$key} {
+    align-items: $value;
+  }
+}
+
+@each $key, $value in map.merge($align-items, $justify-content) {
+  .justify-content-#{$key} {
+    justify-content: $value;
+  }
+}
+
+@each $key, $value in $column-directions {
+  .flex-direction-#{$key} {
+    flex-direction: $value;
+  }
+}
+
+// visibility
+.hide-for-mobile {
+  @include m.media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include m.media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+// animation
+.fade-in {
+  animation: fade-in 0.3s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.3s ease-in-out forwards;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

@@ -1,0 +1,32 @@
+@use "sass:map";
+
+// 640px, 1024px, 1400px
+$break-points-up: (
+  "md": "40em",
+  "lg": "64em",
+  "xl": "87.5em",
+);
+
+// 639px, 1023px, 1399px
+$break-points-down: (
+  "sm": "39.9375em",
+  "md": "63.9375em",
+  "lg": "87.4375em",
+);
+
+@mixin media-breakpoint-up($value) {
+  @media screen and (min-width: map.get($break-points-up, $value)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($value) {
+  @media screen and (max-width: map.get($break-points-down, $value)) {
+    @content;
+  }
+}
+
+// transition
+@mixin transition($time, $el: "all") {
+  transition: #{$el} #{$time}ms ease-in-out;
+}
