@@ -13,11 +13,11 @@
   </head>
   <body data-bs-target=".navbar" data-bs-spy="scroll">
     <!--  Navigation Section Start-->
-    <header id="header">
-      <nav class="navbar navbar-expand-lg bg-white">
+    <header id="header" class="pb-5">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top py-3">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="assets/images/logo.png" alt="logo" />
+            <img src="assets/images/logo.png" alt="logo" class="img-fluid" />
           </a>
           <button
             class="navbar-toggler"
@@ -28,28 +28,24 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <!--            <span class=""></span>-->
             <i class="fas fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-lg-auto align-items-md-center">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Special</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                  >Disabled</a
-                >
+                <a class="nav-link" href="#">Testimonial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -57,6 +53,10 @@
       </nav>
     </header>
     <!--  Navigation Section End-->
+
+    <main class="container pt-5">
+      <button class="btn btn-danger">Button</button>
+    </main>
 
     <script src="assets/js/bootstrap.bundle.js"></script>
     <script src="assets/js/main.js"></script>

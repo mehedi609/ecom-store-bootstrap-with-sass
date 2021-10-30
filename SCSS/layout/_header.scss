@@ -5,77 +5,33 @@
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 @use "../abstracts/functions" as f;
+@use "../vendors/bootstrap/mixins/breakpoints" as *;
 
-header {
-  .nav {
-    position: fixed;
-    width: 100%;
-    padding: 1rem 6.5rem;
-    background: transparent;
-    z-index: 9999;
-    @include m.transition(500);
+#header {
+  .fixed-top {
+    box-shadow: 0 0.125rem 0.675rem rgba(v.$pure-black, 7%);
+  }
+  .navbar-toggler {
+    &:focus {
+      box-shadow: none;
+    }
+  }
 
-    &__mobile-menu {
-      outline: none;
-      border: none;
-      display: none;
+  .navbar-nav {
+    > li {
+      a {
+        color: v.$black;
+        @include m.transition(200);
 
-      > span {
-        position: relative;
-        display: block;
-        width: f.pix_to_rem(27);
-        height: f.pix_to_rem(3);
-        background-color: v.$text-black;
-        @include m.transition(300);
+        &:hover,
+        &:active {
+          color: v.$danger;
+        }
+      }
 
+      @include media-breakpoint-up(lg, v.$bs-grid-breakpoints) {
         &:not(:last-child) {
-          margin: f.pix_to_rem(5) 0;
-        }
-      }
-    }
-
-    &__menu-bar {
-      > ul {
-        > li {
-          &:not(:last-child) {
-            margin-right: f.pix_to_rem(30);
-          }
-
-          > a {
-            color: v.$text-black;
-            font-size: f.pix_to_rem(20);
-            font-weight: 600;
-            @include m.transition(200, color);
-
-            &:hover {
-              color: v.$violet;
-            }
-          }
-        }
-      }
-    }
-
-    &__social {
-      padding-top: f.pix_to_rem(3);
-
-      > span {
-        font-size: f.pix_to_rem(14);
-        font-weight: 500;
-        padding-right: f.pix_to_rem(16);
-        color: v.$text-gray;
-
-        text-transform: uppercase;
-      }
-
-      > ul {
-        > li {
-          &:not(:last-child) {
-            padding-right: f.pix_to_rem(14);
-          }
-          > a {
-            color: v.$text-gray;
-            font-size: f.pix_to_rem(20);
-          }
+          padding-right: 1rem;
         }
       }
     }

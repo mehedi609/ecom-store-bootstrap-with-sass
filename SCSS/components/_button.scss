@@ -2,3 +2,29 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 @use "../abstracts/variables" as v;
+
+.btn {
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: unset;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &-danger {
+    color: v.$white;
+    background-color: v.$danger;
+    border-color: v.$danger;
+
+    &:hover {
+      color: v.$danger;
+      background: transparent;
+    }
+
+    &:focus,
+    &:active:focus {
+      box-shadow: none;
+    }
+  }
+}
