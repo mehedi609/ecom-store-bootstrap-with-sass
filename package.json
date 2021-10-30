@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --watch SCSS/main.scss assets/css/styles.css",
+    "compile:sass": "sass --watch --quiet-deps SCSS/main.scss assets/css/styles.css",
     "start:dev": "live-server --no-css-inject",
     "start": "npm-run-all -l -p compile:sass start:dev"
   },
