@@ -13,8 +13,10 @@
   </head>
   <body data-bs-target=".navbar" data-bs-spy="scroll">
     <!--  Navigation Section Start-->
-    <header id="header" class="pb-5">
-      <nav class="navbar navbar-expand-lg bg-white fixed-top py-3">
+    <header id="header">
+      <nav
+        class="navbar navbar-expand-lg bg-white sticky-top py-3 navbar-shadow"
+      >
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="assets/images/logo.png" alt="logo" class="img-fluid" />
@@ -54,8 +56,75 @@
     </header>
     <!--  Navigation Section End-->
 
-    <main class="container pt-5">
-      <button class="btn btn-danger">Button</button>
+    <main>
+      <section id="hero" class="hero">
+        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#hero-carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="hero__banner hero__banner--1">
+                <div class="hero__banner--text">
+                  <h1>Women</h1>
+                  <h2>52% Discount For This Season</h2>
+                  <a href="#" class="btn btn-danger text-uppercase mt-4"
+                    >Our Products</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="hero__banner hero__banner--2">
+                <div class="hero__banner--text">
+                  <h1>E-Shop</h1>
+                  <h2>With Working Card & Pay Pal</h2>
+                  <a href="#" class="btn btn-danger text-uppercase mt-4">
+                    Our Products
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#hero-carousel"
+            data-bs-slide="prev"
+          >
+            <i
+              class="fas fa-chevron-left carousel-control-prev-icon"
+              aria-hidden="true"
+            ></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#hero-carousel"
+            data-bs-slide="next"
+          >
+            <i
+              class="fas fa-chevron-right carousel-control-next-icon"
+              aria-hidden="true"
+            ></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
     </main>
 
     <script src="assets/js/bootstrap.bundle.js"></script>

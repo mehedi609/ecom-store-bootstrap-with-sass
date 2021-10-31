@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+/*-------------------
+  Header and Navigation Section
+---------------------*/
 
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
@@ -8,7 +8,7 @@
 @use "../vendors/bootstrap/mixins/breakpoints" as *;
 
 #header {
-  .fixed-top {
+  .navbar-shadow {
     box-shadow: 0 0.125rem 0.675rem rgba(v.$pure-black, 7%);
   }
   .navbar-toggler {
